@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Alisei - Lujo, ubicación privilegiada y servicio excepcional en Las Terrenas, Samaná, República Dominicana">
+    <meta name="keywords" content="hotel, lujo, Las Terrenas, Samaná, República Dominicana, hospedaje">
+    <meta name="author" content="Hotel Alisei">
+    <title>Hotel Alisei - Escapadas de Lujo Incomparables</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7B6BFF 100%);
+        }
+        
+        .section-bg {
+            background-color: #EEF0FF;
+        }
+        
+        .accent-text {
+            color: #00E5A8;
+        }
+        
+        .primary-text {
+            color: #5B4BFF;
+        }
+        
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            border-radius: 4px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4a3ae8;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(91, 75, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: #00E5A8;
+            color: #1a1a1a;
+            border-radius: 4px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #00cc8f;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 229, 168, 0.3);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(91, 75, 255, 0.15);
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            color: #5B4BFF;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+        }
+        
+        .faq-answer {
+            transition: all 0.3s ease-out;
+            max-height: 500px;
+            overflow: hidden;
+        }
+        
+        .faq-answer.hidden {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+        
+        .mobile-menu.hidden {
+            display: none;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(91, 75, 255, 0.1);
+            transition: all 0.3s ease-out;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(91, 75, 255, 0.2);
+        }
+        
+        .star-rating {
+            color: #FFD700;
+        }
+        
+        .google-badge {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7B6BFF 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">A</span>
+                </div>
+                <span class="text-xl font-semibold primary-text">Hotel Alisei</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-gray-700 hover:primary-text transition-colors duration-300 font-medium">Características</a>
+                <a href="#benefits" class="text-gray-700 hover:primary-text transition-colors duration-300 font-medium">Beneficios</a>
+                <a href="#testimonials" class="text-gray-700 hover:primary-text transition-colors duration-300 font-medium">Testimonios</a>
+                <a href="#faq" class="text-gray-700 hover:primary-text transition-colors duration-300 font-medium">Preguntas</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-gray-700 hover:primary-text transition-colors duration-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-100">
+            <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <a href="#features" class="text-gray-700 hover:primary-text transition-colors duration-300 font-medium py-2">Características</a>
+                <a href="#benefits" class="text-gray-700 hover:primary-text transition-colors duration-300 font-medium py-2">Beneficios</a>
+                <a href="#testimonials" class="text-gray-700 hover:primary-text transition-colors duration-300 font-medium py-2">Testimonios</a>
+                <a href="#faq" class="text-gray-700 hover:primary-text transition-colors duration-300 font-medium py-2">Preguntas</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 right-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
+                    Hotel Alisei
+                </h1>
+                <p class="text-lg md:text-xl text-white/90 mb-8 font-light leading-relaxed">
+                    Descubre el lujo incomparable en el corazón del Caribe. Ubicado en las playas paradisíacas de Las Terrenas, Samaná, Hotel Alisei ofrece una experiencia de hospedaje de clase mundial con servicio excepcional y amenidades de primer nivel.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://alisei.com" class="btn-primary text-base font-semibold">
+                        Reservar Ahora
+                    </a>
+                    <a href="#features" class="btn-secondary text-base font-semibold">
+                        Explorar Más
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-semibold primary-text mb-4">Características Excepcionales</h2>
+                <p class="text-gray-600 text-lg font-light max-w-2xl mx-auto">
+                    Cada detalle de Hotel Alisei ha sido cuidadosamente diseñado para proporcionar el máximo confort y lujo durante tu estancia.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-lg p-8 shadow-md">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="crown" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold primary-text mb-3">Hospedaje de Lujo</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Habitaciones y suites elegantemente decoradas con vistas al mar, equipadas con amenidades de lujo, aire acondicionado premium, camas de alta calidad y baños de mármol con productos de marca internacional.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-lg p-8 shadow-md">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="map-pin" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold primary-text mb-3">Ubicación Privilegiada</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Ubicado directamente en la playa de Las Terrenas, con acceso inmediato a las aguas cristalinas del Caribe. Cercano a restaurantes, tiendas y atracciones turísticas principales, pero en un entorno tranquilo y exclusivo.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-lg p-8 shadow-md">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="heart-handshake" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold primary-text mb-3">Servicio Excepcional</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Personal altamente capacitado disponible 24/7 para atender todas tus necesidades. Concierge dedicado, servicio de habitación premium, y atención personalizada que anticipan tus deseos antes de que los solicites.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-12 md:py-16 section-bg">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-semibold primary-text mb-4">Beneficios de tu Estancia</h2>
+                <p class="text-gray-600 text-lg font-light max-w-2xl mx-auto">
+                    Disfruta de experiencias inolvidables diseñadas para rejuvenecer tu mente, cuerpo y espíritu en el paraíso caribeño.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Benefit 1 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-gradient-to-br from-[#00E5A8] to-[#00cc8f] rounded-lg flex items-center justify-center">
+                            <i data-lucide="sparkles" class="w-6 h-6 text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold primary-text mb-2">Escapadas de Lujo Incomparables</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Vive momentos mágicos en un entorno de ensueño. Desde relajantes días en la playa privada del hotel hasta noches románticas bajo las estrellas, cada momento es una oportunidad para crear recuerdos eternos. Disfruta de piscinas infinitas, spas de clase mundial y restaurantes gourmet que deleitarán tu paladar.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-gradient-to-br from-[#00E5A8] to-[#00cc8f] rounded-lg flex items-center justify-center">
+                            <i data-lucide="navigation" class="w-6 h-6 text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold primary-text mb-2">Acceso a Ubicación Privilegiada</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Tu ubicación estratégica te permite explorar fácilmente las mejores atracciones de Samaná. Acceso directo a playas vírgenes, parques naturales protegidos, avistamiento de ballenas jorobadas (temporada), buceo en arrecifes de coral, y vibrante vida nocturna. Nuestro equipo de concierge organiza excursiones personalizadas según tus intereses.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-gradient-to-br from-[#00E5A8] to-[#00cc8f] rounded-lg flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold primary-text mb-2">Garantía de Satisfacción</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Tu satisfacción es nuestra prioridad absoluta. Con más de 893 reseñas positivas en Google y una calificación de 4.5 estrellas, nuestros huéspedes confirman constantemente la calidad excepcional de nuestro servicio. Trabajamos incansablemente para superar tus expectativas en cada aspecto de tu estancia.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-gradient-to-br from-[#00E5A8] to-[#00cc8f] rounded-lg flex items-center justify-center">
+                            <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold primary-text mb-2">Experiencias Personalizadas</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Cada huésped es único, y nosotros lo sabemos. Por eso ofrecemos servicios completamente personalizables: desde menús dietéticos especiales en nuestros restaurantes hasta tratamientos de spa a medida. Nuestro equipo se dedica a crear una experiencia tailormade que refleje tus preferencias y necesidades específicas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Background Image -->
+    <section class="py-16 md:py-24 relative overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-r from-[rgba(26,26,26,0.8)] to-[rgba(26,26,26,0.7)]"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 leading-tight">
+                    Vive la Experiencia Hotel Alisei
+                </h2>
+                <p class="text-lg md:text-xl text-white/90 mb-8 font-light leading-relaxed">
+                    No esperes más para vivir la experiencia de hospedaje más lujosa y memorable de tu vida. Reserva tu estancia hoy y descubre por qué miles de huéspedes satisfechos eligen Hotel Alisei como su destino caribeño favorito.
+                </p>
+                <a href="https://alisei.com" class="btn-primary text-base font-semibold inline-block">
+                    Reservar Mi Estancia Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <div class="google-badge justify-center">
+                    <i class="fas fa-star"></i>
+                    <span>4.5/5 de 893 reseñas en Google</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-semibold primary-text mb-4">Lo que Dicen Nuestros Huéspedes</h2>
+                <p class="text-gray-600 text-lg font-light max-w-2xl mx-auto">
+                    Descubre por qué viajeros de todo el mundo eligen Hotel Alisei para sus escapadas de lujo en el Caribe.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">
+                        "Nuestra luna de miel en Hotel Alisei fue absolutamente perfecta. Las vistas al mar desde nuestra suite fueron espectaculares, y el servicio del personal fue impecable. Cada detalle fue cuidadosamente pensado para hacer nuestra estancia inolvidable. ¡Volveremos sin duda!"
+                    </p>
+                    <div>
+                        <p class="font-semibold primary-text">María García</p>
+                        <p class="text-sm text-gray-500 font-light">Recién casada, España</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">
+                        "He viajado a muchos hoteles de lujo alrededor del mundo, y Hotel Alisei se destaca por su combinación única de elegancia, comodidad y ubicación privilegiada. El spa fue transformador, y los restaurantes ofrecieron la mejor gastronomía que he probado. Excelente inversión."
+                    </p>
+                    <div>
+                        <p class="font-semibold primary-text">Carlos Rodríguez</p>
+                        <p class="text-sm text-gray-500 font-light">Ejecutivo, México</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">
+                        "Trajimos a nuestra familia extendida para celebrar el aniversario de mis padres. Hotel Alisei fue perfecto para todos. Desde actividades para los niños hasta tratamientos de spa para los adultos, había algo para todos. El personal fue extraordinariamente amable y atento."
+                    </p>
+                    <div>
+                        <p class="font-semibold primary-text">Alejandra López</p>
+                        <p class="text-sm text-gray-500 font-light">Madre de familia, Colombia</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">
+                        "Como viajero frecuente, busco lugares que ofrezcan tanto relajación como aventura. Hotel Alisei entrega en ambos aspectos. La playa privada es serena y hermosa, pero también está cerca de excursiones emocionantes. El personal de concierge fue invaluable para planificar nuestras aventuras diarias."
+                    </p>
+                    <div>
+                        <p class="font-semibold primary-text">David Chen</p>
+                        <p class="text-sm text-gray-500 font-light">Viajero de negocios, Singapur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-12 md:py-16 section-bg">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-semibold primary-text mb-8 text-center">Sobre Hotel Alisei</h2>
+                
+                <p class="text-gray-600 font-light leading-relaxed text-lg mb-6">
+                    Hotel Alisei fue fundado en 2010 con una visión clara: crear el destino de hospedaje de lujo más extraordinario en el Caribe. Nuestros fundadores, apasionados por la hospitalidad y el paraíso natural de Las Terrenas, invirtieron años en diseñar y construir cada aspecto del hotel con atención meticulosa a los detalles. Desde la arquitectura que se integra armónicamente con el paisaje natural, hasta la selección cuidadosa de cada mueble y decoración, Hotel Alisei refleja un compromiso inquebrantable con la excelencia. A lo largo de más de una década, hemos tenido el honor de recibir a miles de huéspedes de todo el mundo, convirtiéndose en el referente de lujo y servicio excepcional en la región.
+                </p>
+                
+                <p class="text-gray-600 font-light leading-relaxed text-lg">
+                    Nuestra misión es simple pero profunda: crear momentos mágicos que transformen vidas. Creemos que cada huésped merece una experiencia que supere sus expectativas, que los rejuvenezca y que les permita desconectarse del mundo exterior para reconectarse con lo que realmente importa. Nuestros valores fundamentales —excelencia, integridad, sostenibilidad y cuidado genuino— guían cada decisión que tomamos. Nos comprometemos a operar de manera responsable con el medio ambiente, a apoyar a la comunidad local, y a garantizar que cada miembro de nuestro equipo se sienta valorado y motivado. En Hotel Alisei, no solo ofrecemos un lugar para dormir; ofrecemos un sanctuary de paz, lujo y conexión humana auténtica.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-semibold primary-text mb-4">Preguntas Frecuentes</h2>
+                <p class="text-gray-600 text-lg font-light max-w-2xl mx-auto">
+                    Encuentra respuestas a las preguntas más comunes sobre Hotel Alisei y cómo reservar tu estancia perfecta.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-lg shadow-md overflow-hidden">
+                    <div class="faq-question bg-gradient-to-r from-[#5B4BFF]/5 to-[#7B6BFF]/5 p-6 flex items-center justify-between hover:bg-gradient-to-r hover:from-[#5B4BFF]/10 hover:to-[#7B6BFF]/10">
+                        <h3 class="text-lg font-semibold primary-text">¿Cuál es la mejor época para visitar Hotel Alisei?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon w-6 h-6 primary-text"></i>
+                    </div>
+                    <div class="faq-answer hidden p-6 border-t border-gray-100 bg-gray-50">
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Hotel Alisei es un destino hermoso durante todo el año, pero cada estación ofrece experiencias únicas. La estación seca (noviembre a abril) es ideal para disfrutar de playas perfectas y actividades acuáticas. De enero a marzo, es la temporada de avistamiento de ballenas jorobadas, un espectáculo natural extraordinario. La estación verde (mayo a octubre) ofrece tarifas especiales y paisajes más lush, aunque hay mayor probabilidad de lluvia. Recomendamos visitar según tus preferencias personales y disponibilidad, ya que el hotel mantiene estándares excepcionales durante todo el año.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-lg shadow-md overflow-hidden">
+                    <div class="faq-question bg-gradient-to-r from-[#5B4BFF]/5 to-[#7B6BFF]/5 p-6 flex items-center justify-between hover:bg-gradient-to-r hover:from-[#5B4BFF]/10 hover:to-[#7B6BFF]/10">
+                        <h3 class="text-lg font-semibold primary-text">¿Qué opciones de transporte hay desde el aeropuerto?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon w-6 h-6 primary-text"></i>
+                    </div>
+                    <div class="faq-answer hidden p-6 border-t border-gray-100 bg-gray-50">
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Hotel Alisei ofrece múltiples opciones de transporte desde el Aeropuerto Internacional de Punta Cana (PUJ), el más cercano a Las Terrenas. Podemos organizar un servicio de recogida privado con conductor profesional, disponible 24/7. También ofrecemos traslados compartidos más económicos si lo prefieres. El viaje toma aproximadamente 2.5 a 3 horas dependiendo del tráfico. Nuestro equipo de concierge puede coordinar todos los detalles con anticipación para garantizar una llegada cómoda y sin estrés. Simplemente contacta a info@alisei.com con tus detalles de vuelo.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-lg shadow-md overflow-hidden">
+                    <div class="faq-question bg-gradient-to-r from-[#5B4BFF]/5 to-[#7B6BFF]/5 p-6 flex items-center justify-between hover:bg-gradient-to-r hover:from-[#5B4BFF]/10 hover:to-[#7B6BFF]/10">
+                        <h3 class="text-lg font-semibold primary-text">¿Cuáles son las opciones gastronómicas disponibles?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon w-6 h-6 primary-text"></i>
+                    </div>
+                    <div class="faq-answer hidden p-6 border-t border-gray-100 bg-gray-50">
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Hotel Alisei cuenta con varios restaurantes y bares de clase mundial. Nuestro restaurante principal "Alisei Gourmet" ofrece cocina internacional de alta cocina con especialización en mariscos frescos. "Playa Café" es perfecto para desayunos y almuerzos relajados con vistas al mar. "Sunset Bar" sirve cócteles artesanales y tapas al atardecer. Además, ofrecemos servicio de habitación 24/7 con menú completo, y nuestros chefs pueden preparar comidas personalizadas según requerimientos dietéticos específicos (vegetariano, vegano, sin gluten, etc.). Todas nuestras opciones utilizan ingredientes frescos locales y de la más alta calidad.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-lg shadow-md overflow-hidden">
+                    <div class="faq-question bg-gradient-to-r from-[#5B4BFF]/5 to-[#7B6BFF]/5 p-6 flex items-center justify-between hover:bg-gradient-to-r hover:from-[#5B4BFF]/10 hover:to-[#7B6BFF]/10">
+                        <h3 class="text-lg font-semibold primary-text">¿Qué actividades y excursiones ofrece el hotel?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon w-6 h-6 primary-text"></i>
+                    </div>
+                    <div class="faq-answer hidden p-6 border-t border-gray-100 bg-gray-50">
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Nuestro equipo de actividades ofrece una amplia gama de experiencias. En el agua: buceo, snorkel, paddleboarding, pesca deportiva y tours en barco. En tierra: senderismo en la selva, visitas a cascadas, tours de observación de aves y exploración cultural de pueblos locales. Especiales: avistamiento de ballenas jorobadas (temporada), tours en catamarán al atardecer, y clases de cocina caribeña. Todas las actividades pueden personalizarse según tu nivel de experiencia y preferencias. Nuestro concierge puede organizar todo y proporcionar transporte. Muchas actividades están incluidas en paquetes especiales del hotel.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-lg shadow-md overflow-hidden">
+                    <div class="faq-question bg-gradient-to-r from-[#5B4BFF]/5 to-[#7B6BFF]/5 p-6 flex items-center justify-between hover:bg-gradient-to-r hover:from-[#5B4BFF]/10 hover:to-[#7B6BFF]/10">
+                        <h3 class="text-lg font-semibold primary-text">¿Cuál es la política de cancelación y cambios de reserva?</h3>
+                        <i data-lucide="chevron-down" class="faq-icon w-6 h-6 primary-text"></i>
+                    </div>
+                    <div class="faq-answer hidden p-6 border-t border-gray-100 bg-gray-50">
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Entendemos que los planes pueden cambiar, por eso ofrecemos políticas flexibles. Las cancelaciones realizadas 30 días antes de la llegada reciben reembolso completo. Las cancelaciones entre 14 y 29 días antes de la llegada incurren en una tarifa del 25% del total. Las cancelaciones dentro de 13 días de la llegada no son reembolsables, aunque puedes cambiar las fechas sin penalidad. Los cambios de fechas pueden realizarse sin cargo si se solicitan con al menos 14 días de anticipación. Para reservas especiales o paquetes todo incluido, pueden aplicarse términos diferentes. Te recomendamos revisar los términos específicos de tu reserva o contactar a info@alisei.com para detalles completos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 md:pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1: About -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 rounded bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">A</span>
+                        </div>
+                        <span class="text-xl font-semibold">Hotel Alisei</span>
+                    </div>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Tu destino de lujo en el paraíso caribeño. Escapadas inolvidables, servicio excepcional, ubicación privilegiada.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Navigation -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Navegación</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Características</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Beneficios</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Testimonios</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Pages -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Páginas</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Servicios</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contacto</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-phone text-[#00E5A8] mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-gray-400 font-light">(809) 240-5555</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-envelope text-[#00E5A8] mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-gray-400 font-light">info@alisei.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-[#00E5A8] mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-gray-400 font-light text-sm">Playa las Terrenas 1 - Samana<br>Las Terrenas 32000<br>República Dominicana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="border-t border-gray-800 pt-8 mb-8">
+                <div class="flex items-center justify-center gap-6">
+                    <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#00E5A8] transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 font-light">
+                    &copy; 2025 Hotel Alisei. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Main JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
