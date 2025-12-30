@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Hotel Alisei - Lujo, ubicación privilegiada y servicio excepcional en Las Terrenas, Samaná, República Dominicana">
+    <meta name="keywords" content="hotel, lujo, Las Terrenas, Samaná, República Dominicana, hospedaje, contacto">
+    <meta name="author" content="Hotel Alisei">
+    <title>Contacto - Hotel Alisei</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7B6BFF 100%);
+        }
+        
+        .section-bg {
+            background-color: #EEF0FF;
+        }
+        
+        .accent-text {
+            color: #00E5A8;
+        }
+        
+        .primary-text {
+            color: #5B4BFF;
+        }
+        
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            border-radius: 4px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4a3ae8;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(91, 75, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: #00E5A8;
+            color: #1a1a1a;
+            border-radius: 4px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #00cc8f;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 229, 168, 0.3);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(91, 75, 255, 0.15);
+        }
+        
+        .google-badge {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7B6BFF 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .form-input {
+            border: 1px solid #e5e7eb;
+            color: #1a1a1a;
+        }
+        
+        .form-input:focus {
+            border-color: #5B4BFF;
+            box-shadow: 0 0 0 3px rgba(91, 75, 255, 0.1);
+        }
+        
+        .form-label {
+            color: #1a1a1a;
+        }
+        
+        .contact-submit {
+            background-color: #5B4BFF;
+            color: white;
+        }
+        
+        .contact-submit:hover:not(:disabled) {
+            background-color: #4a3ae8;
+        }
+        
+        .contact-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .info-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #5B4BFF 0%, #7B6BFF 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .info-icon i {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .star-rating {
+            color: #FFD700;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 md:px-8 py-4">
+            <div class="flex items-center justify-between w-full">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">A</span>
+                    </div>
+                    <span class="text-xl font-semibold primary-text">Hotel Alisei</span>
+                </a>
+                <a href="index.html" class="text-gray-700 hover:primary-text transition-colors duration-300 font-medium">← Atrás</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 right-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
+                    Ponte en Contacto
+                </h1>
+                <p class="text-lg md:text-xl text-white/90 mb-8 font-light leading-relaxed">
+                    ¿Tienes preguntas sobre tu próxima escapada al paraíso? Nuestro equipo dedicado está aquí para ayudarte a planificar la experiencia de lujo perfecta en Hotel Alisei.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+                <!-- Contact Form Column -->
+                <div>
+                    <h2 class="text-3xl font-semibold primary-text mb-8">Envíanos un Mensaje</h2>
+                    
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-6">
+                        <input type="hidden" name="access_key" value="4b0b5c3d-8e4f-4e5f-8e5f-8e5f8e5f8e5f">
+                        <input type="hidden" name="redirect" value="false">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <div>
+                            <label for="name" class="block text-sm font-semibold form-label mb-2">Nombre Completo *</label>
+                            <input type="text" name="name" id="name" required 
+                                class="w-full px-4 py-3 form-input border rounded-lg outline-none transition-all"
+                                placeholder="Juan Pérez">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-semibold form-label mb-2">Correo Electrónico *</label>
+                            <input type="email" name="email" id="email" required 
+                                class="w-full px-4 py-3 form-input border rounded-lg outline-none transition-all"
+                                placeholder="juan@ejemplo.com">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold form-label mb-2">Número de Teléfono</label>
+                            <input type="tel" name="phone" id="phone" 
+                                class="w-full px-4 py-3 form-input border rounded-lg outline-none transition-all"
+                                placeholder="+1 (809) 240-5555">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold form-label mb-2">Asunto *</label>
+                            <input type="text" name="subject" id="subject" required 
+                                class="w-full px-4 py-3 form-input border rounded-lg outline-none transition-all"
+                                placeholder="Tema de tu consulta">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold form-label mb-2">Mensaje *</label>
+                            <textarea name="message" id="message" required rows="5" 
+                                class="w-full px-4 py-3 form-input border rounded-lg outline-none resize-none transition-all"
+                                placeholder="¿Cómo podemos ayudarte?"></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn"
+                            class="w-full contact-submit font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-[1.02]">
+                            Enviar Mensaje
+                        </button>
+                        
+                        <div id="form-message" class="mt-4 p-4 rounded-lg hidden bg-green-500 text-white text-center">
+                            ✓ ¡Mensaje enviado exitosamente!
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Business Information Column -->
+                <div>
+                    <h2 class="text-3xl font-semibold primary-text mb-6">Información de Contacto</h2>
+                    
+                    <!-- Google Reviews Badge -->
+                    <div class="google-badge mb-8">
+                        <div>
+                            <div class="star-rating">★★★★☆</div>
+                            <div class="text-sm">4.5/5 estrellas</div>
+                            <div class="text-xs">Basado en 893 reseñas de Google</div>
+                        </div>
+                    </div>
+
+                    <!-- Business Name -->
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold primary-text">Hotel Alisei</h3>
+                        <p class="text-gray-600 font-light mt-2">Lujo incomparable en el Caribe</p>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Dirección</h4>
+                            <p class="text-gray-600 font-light leading-relaxed">
+                                Playa las Terrenas 1 - Samana<br>
+                                Francisco Alberto Caamaño Deñó<br>
+                                Las Terrenas 32000<br>
+                                República Dominicana
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Teléfono</h4>
+                            <p class="text-gray-600 font-light">
+                                <a href="tel:+18092405555" class="hover:primary-text transition-colors">(809) 240-5555</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Horario de Atención</h4>
+                            <div class="text-gray-600 font-light space-y-1">
+                                <p><span class="font-semibold">Lunes:</span> Abierto 24 horas</p>
+                                <p><span class="font-semibold">Martes:</span> Abierto 24 horas</p>
+                                <p><span class="font-semibold">Miércoles:</span> Abierto 24 horas</p>
+                                <p><span class="font-semibold">Jueves:</span> Abierto 24 horas</p>
+                                <p><span class="font-semibold">Viernes:</span> Abierto 24 horas</p>
+                                <p><span class="font-semibold">Sábado:</span> Abierto 24 horas</p>
+                                <p><span class="font-semibold">Domingo:</span> Abierto 24 horas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="mt-12">
+                        <h4 class="font-semibold text-gray-900 mb-4">Ubicación en el Mapa</h4>
+                        <div class="w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-lg">
+                            <iframe 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                marginheight="0" 
+                                marginwidth="0" 
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=-180%2C-90%2C180%2C90&amp;layer=mapnik"
+                                style="border: 1px solid #ccc;"
+                                loading="lazy"
+                                title="Ubicación de Hotel Alisei"
+                            ></iframe>
+                        </div>
+                        <script>
+                            (function() {
+                                const address = "Playa las Terrenas 1 - Samana, Francisco Alberto Caamaño Deñó, Las Terrenas 32000, República Dominicana";
+                                const iframe = document.querySelector('iframe[title="Ubicación de Hotel Alisei"]');
+                                
+                                fetch('https://nominatim.openstreetmap.org/search?format=json&q=' + encodeURIComponent(address))
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (data && data.length > 0) {
+                                            const lat = parseFloat(data[0].lat);
+                                            const lon = parseFloat(data[0].lon);
+                                            const bbox = (lon - 0.01) + '%2C' + (lat - 0.01) + '%2C' + (lon + 0.01) + '%2C' + (lat + 0.01);
+                                            const marker = lat + '%2C' + lon;
+                                            iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=' + bbox + '&layer=mapnik&marker=' + marker;
+                                        }
+                                    })
+                                    .catch(err => console.log('Error al cargar el mapa:', err));
+                            })();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 md:py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">A</span>
+                        </div>
+                        <span class="text-xl font-semibold">Hotel Alisei</span>
+                    </div>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Escapadas de lujo incomparables en el corazón del Caribe.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Inicio</a></li>
+                        <li><a href="index.html#features" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Características</a></li>
+                        <li><a href="index.html#benefits" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Beneficios</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300 font-light">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-400 font-light">
+                        <li><a href="tel:+18092405555" class="hover:text-white transition-colors duration-300">(809) 240-5555</a></li>
+                        <li>Las Terrenas, Samaná</li>
+                        <li>República Dominicana</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="font-semibold mb-4">Síguenos</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gradient-to-br from-[#5B4BFF] to-[#7B6BFF] flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 font-light text-sm">
+                        &copy; 2024 Hotel Alisei. Todos los derechos reservados.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 font-light text-sm">Política de Privacidad</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 font-light text-sm">Términos de Servicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const messageDiv = document.getElementById('form-message');
+            
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
+                
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        form.reset();
+                        messageDiv.classList.remove('hidden');
+                        messageDiv.style.background = '#22c55e';
+                        messageDiv.textContent = '✓ ¡Mensaje enviado exitosamente!';
+                        submitBtn.textContent = '¡Enviado!';
+                        
+                        setTimeout(() => {
+                            messageDiv.classList.add('hidden');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Enviar Mensaje';
+                        }, 5000);
+                    } else {
+                        throw new Error('Envío fallido');
+                    }
+                } catch (error) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Mensaje';
+                    messageDiv.style.background = '#ef4444';
+                    messageDiv.textContent = '✗ Error al enviar. Por favor intenta de nuevo.';
+                    messageDiv.classList.remove('hidden');
+                    
+                    setTimeout(() => {
+                        messageDiv.classList.add('hidden');
+                    }, 5000);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
